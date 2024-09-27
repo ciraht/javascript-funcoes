@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="scripts.js"></script>
+    <title>Atividade 5</title>
+</head>
+<body>
+    <script>
+        var resultado = 0
+        let num1 = parseFloat(prompt('Inserer número: '))
+        while(true){
+            var simbolo = prompt('Inserir símbolo (+, -, * ou /): ')
+            if ((simbolo == '+') || (simbolo == '-') || (simbolo == '*') || (simbolo == '/')){
+                break
+            } else{
+                alert('Inserir símbolo válido.')
+            }
+        }
+        let num2 = parseFloat(prompt('Inserir número: '))
+
+        if (simbolo == '+'){
+            resultado = adicao(num1, num2)
+            alert(num1 + simbolo + num2 +'='+resultado)
+        } else if (simbolo == '-'){
+            resultado = subtracao(num1, num2)
+            alert(num1 + simbolo + num2 +'='+resultado)
+        } else if (simbolo == '*'){
+            resultado = multiplicacao(num1, num2)
+            alert(num1 + simbolo + num2 +'='+resultado)
+        } else if (simbolo == '/'){
+            resultado = divisao(num1, num2)
+            alert(num1 + simbolo + num2 +'='+resultado)
+        }
+    </script>
+    <a href="6.html">PRÓXIMA</a>
+</body>
+</html>

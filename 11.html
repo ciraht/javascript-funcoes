@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="scripts.js"></script>
+    <title>Atividade 11</title>
+</head>
+<body>
+    <script>
+        alert('Bem-vindo ao Jogo de Craps! Ao prosseguir, os 2 dados serão girados.')
+        let dado = girarDoisDadosDe6Lados()
+        if ((dado == 7)||(dado == 11)){
+            alert('O resultado do dado foi '+dado+'. Você ganhou sendo um natural! Clique em F5 ou recarregue a página para jogar novamente!')
+        } else if ((dado == 2)||(dado == 3)||(dado == 12)){
+            alert('O resultado do dado foi '+dado+'. Você perdeu com um craps... Clique em F5 ou recarregue a página para jogar novamente!')
+        } else {
+            alert('O resultado do dado foi '+dado+'. Esse é seu ponto, e seu objetivo é tirar esse número no dado, antes de tirar 7. Está pronto?')
+            var ponto = dado
+            while(true){
+                dado = girarDoisDadosDe6Lados()
+                alert('O resultado do dado foi '+dado+'.')
+                if (ponto == dado){
+                    alert('Parabéns, você ganhou! Clique em F5 ou recarregue a página para jogar novamente!')
+                    break
+                }
+                if (dado == 7){
+                    alert('Infelizmente, você tirou 7 antes de tirar '+ponto+'... Clique em F5 ou recarregue a página para jogar novamente!')
+                    break
+                }
+            }
+        }
+    </script>
+    <a href="12.html">PRÓXIMA</a>
+</body>
+</html>

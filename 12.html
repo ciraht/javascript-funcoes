@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="scripts.js"></script>
+    <title>Atividade 12</title>
+</head>
+<body>
+    <script>
+        let data = prompt('Insira uma data no seguinte formato: DD/MM/AAAA ')
+        let lista = transformarModeloDeDataMesAno(data)
+        if (lista === null){
+            alert('NULL')
+        } else {
+            alert(lista[0]+' de '+lista[1]+' de '+lista[2])
+        }
+    </script>
+    <a href="13.html">PRÓXIMA</a>
+</body>
+</html>

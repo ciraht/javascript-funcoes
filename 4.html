@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="scripts.js"></script>
+    <title>Atividade 4</title>
+</head>
+<body>
+    <script>
+        let count = 1
+        let lista = []
+        while(count != 4){
+            var nota = parseFloat(prompt('Digite a '+count+'ª nota: '))
+            lista.push(nota)
+            count +=1
+        }
+        while(true){
+            var decisao = prompt('Insira A para média Aritmética e P para Ponderada: ')
+            if ((decisao == 'P') || (decisao == 'A')){
+                break
+            } else{
+                alert('Favor digitar A ou P, em maiúsculo')
+            }
+        }
+        if (decisao == 'P'){
+            let resultadoP = mediaPonderada(lista[0], lista[1], lista[2])
+            alert('Notas: '+lista+'\nMétodo de média escolhido: '+decisao+'\nMédia: '+resultadoP)
+        } else if (decisao == 'A'){
+            let resultadoA = mediaAritmetica(lista[0], lista[1], lista[2])
+            alert('Notas: '+lista+'\nMétodo de média escolhido: '+decisao+'\nMédia: '+resultadoA)
+        }
+    </script>
+    <a href="5.html">PRÓXIMA</a>
+</body>
+</html>
